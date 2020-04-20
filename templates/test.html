@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block test %}
+
+
+
+<div class="album py-5 bg-light">
+    <div class="container">
+        <div class="row">
+
+    {% for var_project in project.all %} <!-- here we are looping through ech field stored in project variable passed from views.py file to itterate through each project and create one window for each -->
+
+
+          <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <img src="{{ var_project.image.url }}" width="100%" height="100%"> <!-- here we defined our image .url is to specify that it has to tak image url as input ,height and with are 100% which means they will be 100% to the window -->
+            <div class="card-body">
+              <p class="card-text">{{ var_project.summary }} </p>  <!-- here we added the summary of each project -->
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+            {% endfor %} <!-- closed the for loop -->
+        </div>
+    </div>
+</div>
+
+
+
+
+{% endblock %}

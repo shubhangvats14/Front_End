@@ -1,0 +1,120 @@
+/*
+
+Cascading Style Sheets(CSS) where cascading stands for step by step process that is the last command given is only counted
+Also known as rendor blocking site , because at the time of accessing ,it renders the html file from loading, so this is the reason why a good css should be small in size
+
+It has only one principle:-
+(
+    selectors can be more than one and can be defined in different manners:-
+        -> if 'h1, p' is defined it means apply property to all h1 and to all p tags
+        -> if 'h1 p' is defined it means that apply the property to only to p tags which are under h1 tag
+        -> if 'h1 > p' is defined it means that apply the property to only those p tags whose parent tag is h1 tag
+        -> if 'h1 + p' is defined it means that apply the property to only those p come exactly after h1 tag
+)
+
+#format of css
+selector{
+    property : value;
+    }
+i.e., we first define selector and init we define property value pair
+
+->  CSS has a property known as specificity , which means that if a particular tag has been defined a specific property then property
+    defined to the whole page will not effect it
+
+# selectors are usually tags
+
+# class are the best option for applying to a group of tags(defined in html pages), defined by using attribute
+class in html tags, class is represented using .classname in css
+
+# id is an option to define a name to a tag(or a group of tag using div tag in html), defined by the attribute
+id inside html tag, id is represented using #idname in css
+
+# * is used to define a property to whole page
+
+# hover property means that apply the changes only when the mouse cursor moves on it
+
+# first-child means that property will only be applied to the first tag under the defined class
+
+# last-child means that property will only be applied to the last tag under the defined class
+
+# !important is used for making the property important
+
+# float property is used to wrap around images inside the text
+
+# padding property means the distance between text and its border
+
+#we can define text parts with different styling using boxmodel, this can be done by defining class of the text in <div> in the html and styling that class in css
+
+# if we define the size of a tag using parameter em (2em) this means that it will be twice the size of its relative text, that is the text with which it is placed,
+    for example we can also define the size of a pre-existing tag so we did this with strong tag. rem can also be used which will increase the measure with respect
+    to the html font
+*/
+
+
+
+
+*{
+    text-align: center;
+}
+
+h2:hover{
+    color: red !important;
+    background-color: aqua;
+    text-align: center;
+    border: 5px solid gold; /* Here color can also be provided as rgb(0,0,0) */
+}
+
+body{
+    background-image: url("../ray-hennessy-6-JIDCnZG2E-unsplash.jpg");
+    background-size: cover;
+}
+/* defined by class */
+.para:first-child{
+    border: 5px solid rgb(255, 0, 0);
+}
+
+.para1{
+    border: 5px dotted rgb(0, 255, 0);
+}
+
+#group{
+    border: 5px dotted rgb(0, 0, 150);
+    background-color: #ff25d1;
+
+}
+
+.boxmodel{
+    border : 5px solid red;
+    display : inline-block; /* This is used to make the box in-lined to the text */
+    padding: 10px; /* padding defines the distance of the text from the border,here 10px is from all four sides, can be given as the four dimension e.g., 10px 5px 10px 5px */
+    margin: 10px; /* this is the space between the boxes or we can say it is the space which is provide otside the border */
+    height: 10px;
+    width: 20px;
+}
+
+
+#new{
+
+    text-transform: uppercase;
+    line-height: 40px;
+    font-style: italic;
+    font-weight: bold; /* we can add number ranging from 0-900 in place of bold */
+    font-size: 150%;
+    font-family: 'Indie Flower', cursive;
+/*
+we can add a font from google fonts ,but that makes the loading little slower
+for adding any fond family we have to give the link of that google form in html file , and include it here in css file using font-family:
+*/
+}
+img{
+    float: right;
+}
+
+strong{
+    font-size: 2em;
+}
+
+/* minified css file */
+/*
+*{text-align:center}h2:hover{color:red!important;background-color:#0ff;text-align:center;border:5px solid gold}body{background-image:url(ray-hennessy-6-JIDCnZG2E-unsplash.jpg);background-size:cover}.para:first-child{border:5px solid red}.para1{border:5px dotted #0f0}#group{border:5px dotted #000096;background-color:#ff25d1}.boxmodel{border:5px solid red;display:inline-block;padding:10px;margin:10px;height:10px;width:20px}#new{text-transform:uppercase;line-height:40px;font-style:italic;font-weight:700;font-size:150%;font-family:'Indie Flower',cursive}img{float:right}strong{font-size:2em}
+*/

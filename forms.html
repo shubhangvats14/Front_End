@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+</head>
+<body>
+<h1><u>Form</u></h1>
+
+<!-- Form tag -->
+<!--
+     name - to call
+     value - input value
+-->
+<form>
+
+    First Name   :      <input type="text" name="first_name" required><br>
+<br>
+    Last Name   :       <input type="text" name="last_name"><br>
+<br>
+    E-mail Address   :  <input type="email" name="email" required><br>
+<br>
+    Password   :        <input type="password" name="password" required><br>
+<br>
+    Birthdate   :       <input type="date" name="birth"><br>
+<br>
+    Gender   :          <input type="radio" name="gender" required value="male">Male
+                        <input type="radio" name="gender" value="female">Female
+                        <input type="radio" name="gender" value="others">Others<br>
+<!-- As these all radio are of same name thats why only one is to be checked, if they were having different names then each individual can be checked, this is the reason because
+ of which required attribute works on all radio by just only written in one, also here as name is for common reason so for the naming of variable or value which will be used
+ when storing the input is given by the attribute value-->
+<br>
+    Pet owned   :       <input type="checkbox" value="cat" name="cat">Cat
+                        <input type="checkbox" value="dog" name="dog">Dog
+                        <input type="checkbox" value="other" name="other">Other<br>
+<br>
+
+    Cars owned   :<br>
+    <!-- select tag is used to give a drop down menu , if multiple attribute is given to this tag then it can select multiple options-->
+    <select multiple>
+        <option value="Ford" name="ford">Ford</option>
+        <option value="Mercedes" name="mercedes">Mercedes</option>
+        <option value="Audi" name="mercedes">Audi</option>
+    </select><br>
+<br>
+    <input type="submit", name="submit">
+    <input type="reset", name="reset">
+
+</form>
+<!-- to make any field mandatory we add required as attribute in input tag -->
+
+
+
+<br><br>
+<a href="https://www.w3schools.com/html/html_forms.asp">For more info about html forms.<b>Click Here</b></a>
+
+
+
+<!-- Quarry String
+
+file:///C:/Users/shubh/PycharmProjects/Front_End/forms.html
+?
+first_name=Shubhang #this is a property-value pair and is separated by &
+&
+last_name=Vats
+&
+email=shubhangvats14%40gmail.com
+&
+password=dd
+&
+birth=2020-04-15
+&
+gender=on
+&
+submit=Submit
+
+-->
+</body>
+</html>

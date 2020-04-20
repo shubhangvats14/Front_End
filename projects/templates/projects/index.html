@@ -1,0 +1,13 @@
+# if we want to reuse the banner at this page or at all pages , one way is to paste the code of banner here and at all other pages
+# other easy way is to paste the code of banner in a base file(reusable template) and import that base file using { etends } command at any page
+# but here if we want to add our text or data , if we will write simply it will go to the end of base html file and will be of no use, so to do that we will use
+
+
+{% extends 'base.html' %}
+
+{% block test %}
+
+
+<p>This is our projects text. here we can add any html code</p>
+
+{% endblock %}
